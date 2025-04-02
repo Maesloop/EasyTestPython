@@ -64,6 +64,8 @@ class ShoppingCart:
         
     def get_item_count(self):
         """Vrátí celkový počet položek v košíku."""
+        if not self.items:
+            return 0
         return sum(item['quantity'] for item in self.items.values())
         
     def update_item_price(self, item_name, new_price):
@@ -76,3 +78,10 @@ class ShoppingCart:
             
         self.items[item_name]['price'] = new_price
         return True
+    
+    def get_cart_contents(self):
+        """Vrátí obsah košíku v čitelném formátu pro testování."""
+        contents = []
+        for item_name, details in self.items.items():
+            contents.append(f"{item_name}: {details['quantity']} ks × {details['price']} Kč")
+        return contents
