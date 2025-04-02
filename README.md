@@ -21,6 +21,7 @@ Testing easy python object function
     - Ověřte správný výpočet po změně ceny položky
 
 ODPOVĚDI:
+
 **Testování přidání položky**:
 1. True
 2. ValueError("Název položky musí být neprázdný řetězec")
