@@ -3,7 +3,7 @@ from shoppingcart import ShoppingCart
 
 class TestShoppingCart(unittest.TestCase):
     def setUp(self):
-        self.cart = ShoppingCart()
+        self.cart = ShoppingCart() # Metoda vytváří novou instanci před každým testem
         
     def test_add_item(self):
         self.assertTrue(self.cart.add_item("jablko", 10, 5))
