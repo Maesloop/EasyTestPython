@@ -25,13 +25,13 @@ ODPOVĚDI:
 **Testování přidání položky**:
 1. True
 2. ValueError("Název položky musí být neprázdný řetězec")
-3. ValueError: Cena musí být kladné číslo
+3. ValueError: ("Cena musí být kladné číslo")
 4. True
 
 **Testování odebrání položky**:
 1. Full remove
-2. +
-3. Nothing happens, No error
+2. Odebere cast polozky korektne
+3. OK (print -> false)
 
 **Testování slevových kódů**:
 1. True
@@ -39,6 +39,6 @@ ODPOVĚDI:
 3. False
 
 **Testování výpočtu celkové ceny**:
-1. +
-2. +
-3. +
+1. OK
+2. OK
+3. OK
