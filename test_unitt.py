@@ -12,6 +12,16 @@ class TestShoppingCart(unittest.TestCase):
     def test_invalid_item_name(self):
         with self.assertRaises(ValueError):
             self.cart.add_item("", 10)
+            
+    def test_invalid_price(self):
+        with self.assertRaises(ValueError):
+            self.cart.add_item("hruška", -5)
+    def test_update_price(self):
+        self.cart.add_item("jablko", 30, 5)
+        self.assertTrue(self.cart.update_item_price("jablko",20))
+    
+    
+
 if __name__ == "__main__":
     unittest.main()
     
